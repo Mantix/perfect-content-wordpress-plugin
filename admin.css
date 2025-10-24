@@ -1,0 +1,172 @@
+/* Perfect Content Plugin Admin Styles */
+
+:root {
+    --perfect-content-primary: #00a4a4;
+    --perfect-content-primary-dark: #008a8a;
+    --perfect-content-primary-light: #e6f7f7;
+}
+
+.perfect-content-admin {
+    max-width: 800px;
+}
+
+.perfect-content-admin .card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.perfect-content-admin .card h2 {
+    margin-top: 0;
+    color: #23282d;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfect-content-admin .card h2::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/icon-teal.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.perfect-content-admin .form-table th {
+    width: 200px;
+    padding: 20px 10px 20px 0;
+    vertical-align: top;
+}
+
+.perfect-content-admin .form-table td {
+    padding: 15px 10px;
+}
+
+.perfect-content-admin input[readonly] {
+    background-color: #f1f1f1;
+    color: #666;
+}
+
+.perfect-content-admin .button-primary {
+    background: var(--perfect-content-primary);
+    border-color: var(--perfect-content-primary);
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+
+.perfect-content-admin .button-primary:hover {
+    background: var(--perfect-content-primary-dark);
+    border-color: var(--perfect-content-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 164, 164, 0.3);
+}
+
+.perfect-content-admin .button {
+    border-color: var(--perfect-content-primary);
+    color: var(--perfect-content-primary);
+    transition: all 0.2s ease;
+}
+
+.perfect-content-admin .button:hover {
+    background: var(--perfect-content-primary);
+    color: #fff;
+    border-color: var(--perfect-content-primary);
+}
+
+.perfect-content-admin .description {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+.perfect-content-admin .api-info {
+    background: var(--perfect-content-primary-light);
+    border-left: 4px solid var(--perfect-content-primary);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.perfect-content-admin .api-info strong {
+    color: var(--perfect-content-primary);
+}
+
+/* Brand header styling */
+.perfect-content-admin .brand-header {
+    background: linear-gradient(135deg, var(--perfect-content-primary) 0%, var(--perfect-content-primary-dark) 100%);
+    color: white;
+    padding: 20px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.perfect-content-admin .brand-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.perfect-content-admin .brand-logo {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfect-content-admin .brand-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Enhanced form styling */
+.perfect-content-admin .form-table input[type="text"] {
+    border: 2px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: border-color 0.2s ease;
+}
+
+.perfect-content-admin .form-table input[type="text"]:focus {
+    border-color: var(--perfect-content-primary);
+    box-shadow: 0 0 0 1px var(--perfect-content-primary);
+    outline: none;
+}
+
+/* Status indicators */
+.perfect-content-admin .status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.perfect-content-admin .status-indicator.connected {
+    background: #d4edda;
+    color: #155724;
+}
+
+.perfect-content-admin .status-indicator.disconnected {
+    background: #f8d7da;
+    color: #721c24;
+}

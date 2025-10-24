@@ -1,0 +1,91 @@
+# Perfect Content Plugin - English
+# Copyright (C) 2024 Perfect Content
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Perfect Content 1.0.0\n"
+"Report-Msgid-Bugs-To: https://perfectcontent.nl\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: Perfect Content\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Perfect Content Settings"
+msgstr "Perfect Content Settings"
+
+msgid "Perfect Content"
+msgstr "Perfect Content"
+
+msgid "API Configuration"
+msgstr "API Configuration"
+
+msgid "Use these settings in your Perfect Content dashboard to connect your WordPress site."
+msgstr "Use these settings in your Perfect Content dashboard to connect your WordPress site."
+
+msgid "API Endpoint"
+msgstr "API Endpoint"
+
+msgid "Copy this URL to your Perfect Content dashboard."
+msgstr "Copy this URL to your Perfect Content dashboard."
+
+msgid "API Key"
+msgstr "API Key"
+
+msgid "Regenerate Key"
+msgstr "Regenerate Key"
+
+msgid "Copy this key to your Perfect Content dashboard."
+msgstr "Copy this key to your Perfect Content dashboard."
+
+msgid "About Perfect Content"
+msgstr "About Perfect Content"
+
+msgid "Perfect Content is a web application that generates high-quality content using AI and allows professionals to review and edit the content before publishing."
+msgstr "Perfect Content is a web application that generates high-quality content using AI and allows professionals to review and edit the content before publishing."
+
+msgid "Visit Perfect Content"
+msgstr "Visit Perfect Content"
+
+msgid "Go to Dashboard"
+msgstr "Go to Dashboard"
+
+msgid "In your Perfect Content dashboard, go to \"Edit\" your company and fill in the API endpoint and API key from above."
+msgstr "In your Perfect Content dashboard, go to \"Edit\" your company and fill in the API endpoint and API key from above."
+
+msgid "Are you sure you want to regenerate the API key? This will break the connection with Perfect Content until you update the key in your dashboard."
+msgstr "Are you sure you want to regenerate the API key? This will break the connection with Perfect Content until you update the key in your dashboard."
+
+msgid "API key regenerated successfully!"
+msgstr "API key regenerated successfully!"
+
+msgid "Error regenerating API key."
+msgstr "Error regenerating API key."
+
+msgid "You do not have permission to perform this action."
+msgstr "You do not have permission to perform this action."
+
+msgid "Invalid API key"
+msgstr "Invalid API key"
+
+msgid "Title and body are required"
+msgstr "Title and body are required"
+
+msgid "Failed to create post"
+msgstr "Failed to create post"
+
+msgid "Post created successfully"
+msgstr "Post created successfully"
+
+msgid "Connection Status:"
+msgstr "Connection Status:"
+
+msgid "Ready to receive content"
+msgstr "Ready to receive content"
+
+msgid "Configuration incomplete"
+msgstr "Configuration incomplete"
