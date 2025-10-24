@@ -1,0 +1,25 @@
+{
+    "example_published_post": {
+        "success": true,
+        "id": 123,
+        "url": "https://yoursite.com/your-blog-post/",
+        "status": "publish",
+        "published_at": "2024-01-01T12:00:00+00:00",
+        "message": "Post created successfully"
+    },
+    "example_scheduled_post": {
+        "success": true,
+        "id": 124,
+        "url": "https://yoursite.com/scheduled-blog-post/",
+        "status": "planned",
+        "published_at": "2024-01-15T09:30:00+00:00",
+        "message": "Post created successfully"
+    },
+    "example_error_response": {
+        "code": "missing_data",
+        "message": "Title and body are required",
+        "data": {
+            "status": 400
+        }
+    }
+}

@@ -31,6 +31,17 @@ Perfect Content is a WordPress plugin that seamlessly integrates with the Perfec
 4. Configure these settings in your Perfect Content dashboard
 5. Perfect Content will automatically publish content to your WordPress site
 
+= API Response =
+
+The plugin returns detailed information about published posts:
+
+* **Post URL**: Direct link to the published post
+* **Post Status**: Whether the post is published or scheduled
+* **Datetime Information**: Publication or scheduled datetime in both ISO format and readable format
+* **Post ID**: WordPress post ID for reference
+
+This allows Perfect Content to track and manage published content effectively.
+
 = Perfect Content Service =
 
 Perfect Content is a web application that generates high-quality content using AI and allows professionals to review and edit the content before publishing. The service provides:

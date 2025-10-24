@@ -43,6 +43,21 @@ The plugin creates a REST API endpoint at `/wp-json/perfect-content/v1/publish` 
 - `X-API-KEY`: Your API key from the plugin settings
 - `Content-Type`: application/json
 
+### API Response
+
+The API returns detailed information about the created post:
+
+```json
+{
+    "success": true,
+    "id": 123,
+    "url": "https://yoursite.com/your-blog-post/",
+    "status": "future",
+    "published_at": "2024-01-01T12:00:00+00:00",
+    "message": "Post created successfully"
+}
+```
+
 ## Security
 
 - All API requests are authenticated using the API key

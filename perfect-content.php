@@ -232,9 +232,18 @@ class PerfectContentPlugin {
             set_post_thumbnail($post_id, $featured_image_id);
         }
         
+        // Get post URL and scheduled datetime
+        $post_url = get_permalink($post_id);
+        $post_date = get_post_field('post_date', $post_id);
+        $post_status = get_post_status($post_id);
+        
+        // Format the response
         return array(
             'success' => true,
-            'post_id' => $post_id,
+            'id' => $post_id,
+            'url' => $post_url,
+            'status' => $post_status,
+            'published_at' => gmdate('c', strtotime($post_date)),
             'message' => __('Post created successfully', 'perfect-content')
         );
     }

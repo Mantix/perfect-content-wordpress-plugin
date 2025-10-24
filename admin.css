@@ -54,23 +54,6 @@
     color: #666;
 }
 
-.perfect-content-admin .button-primary {
-    background: var(--perfect-content-primary);
-    border-color: var(--perfect-content-primary);
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 10px;
-    transition: all 0.2s ease;
-}
-
-.perfect-content-admin .button-primary:hover {
-    background: var(--perfect-content-primary-dark);
-    border-color: var(--perfect-content-primary-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 164, 164, 0.3);
-}
-
 .perfect-content-admin .button {
     border-color: var(--perfect-content-primary);
     color: var(--perfect-content-primary);
@@ -81,6 +64,23 @@
     background: var(--perfect-content-primary);
     color: #fff;
     border-color: var(--perfect-content-primary);
+}
+
+.perfect-content-admin .button.button-primary {
+    background: var(--perfect-content-primary);
+    border-color: var(--perfect-content-primary);
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+
+.perfect-content-admin .button.button-primary:hover {
+    background: var(--perfect-content-primary-dark);
+    border-color: var(--perfect-content-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 164, 164, 0.3);
 }
 
 .perfect-content-admin .description {
@@ -129,6 +129,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.perfect-content-admin .brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .perfect-content-admin .brand-logo svg {
