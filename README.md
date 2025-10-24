@@ -1,6 +1,6 @@
 # Perfect Content WordPress Plugin
 
-A WordPress plugin that integrates with Perfect Content to automatically publish AI-generated content to your WordPress site.
+A WordPress plugin developed by Mantix BV that integrates with Perfect Content to automatically publish AI-generated content to your WordPress site.
 
 ## Features
 
@@ -82,6 +82,10 @@ Language files are included in the `/languages/` directory.
 ## Support
 
 For support and more information, visit [Perfect Content](https://perfectcontent.nl).
+
+## About Mantix BV
+
+This plugin is developed by [Mantix BV](https://mantix.nl), a Dutch software development company specializing in web applications and WordPress solutions.
 
 ## License
 

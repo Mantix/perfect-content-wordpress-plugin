@@ -1,5 +1,5 @@
 === Perfect Content ===
-Contributors: perfectcontent
+Contributors: mantix
 Tags: content, ai, automation, publishing, api
 Requires at least: 5.0
 Tested up to: 6.8
@@ -8,11 +8,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Integrate with Perfect Content to automatically publish AI-generated content to your WordPress site.
+Integrate with Perfect Content to automatically publish AI-generated content to your WordPress site. Developed by Mantix BV.
 
 == Description ==
 
-Perfect Content is a WordPress plugin that seamlessly integrates with the Perfect Content web application to automatically publish AI-generated content to your WordPress site.
+Perfect Content is a WordPress plugin developed by Mantix BV that seamlessly integrates with the Perfect Content web application to automatically publish AI-generated content to your WordPress site.
 
 = Key Features =
 
@@ -87,7 +87,7 @@ The plugin supports English and Dutch languages.
 == Changelog ==
 
 = 1.0.0 =
-* Initial release
+* Initial release by Mantix BV
 * API integration with Perfect Content
 * Automatic image handling
 * Scheduled publishing support
@@ -102,6 +102,10 @@ Initial release of Perfect Content WordPress plugin.
 == Support ==
 
 For support and more information, visit [Perfect Content](https://perfectcontent.nl).
+
+== About Mantix BV ==
+
+This plugin is developed by [Mantix BV](https://mantix.nl), a Dutch software development company specializing in web applications and WordPress solutions.
 
 == Privacy Policy ==
 

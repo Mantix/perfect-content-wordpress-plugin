@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Perfect Content
- * Plugin URI: https://perfectcontent.nl
+ * Plugin URI: https://wordpress.org/plugins/perfect-content/
  * Description: Integrate with Perfect Content to automatically publish AI-generated content to your WordPress site.
  * Version: 1.0.0
- * Author: Perfect Content
- * Author URI: https://perfectcontent.nl
+ * Author: Mantix BV
+ * Author URI: https://mantix.nl
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: perfect-content

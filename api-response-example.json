@@ -1,4 +1,11 @@
 {
+    "plugin_info": {
+        "name": "Perfect Content WordPress Plugin",
+        "developer": "Mantix BV",
+        "website": "https://mantix.nl",
+        "product": "Perfect Content",
+        "product_website": "https://perfectcontent.nl"
+    },
     "example_published_post": {
         "success": true,
         "id": 123,
