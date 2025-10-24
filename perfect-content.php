@@ -31,15 +31,10 @@ class PerfectContentPlugin {
         add_action('admin_init', array($this, 'admin_init'));
         add_action('wp_ajax_perfect_content_regenerate_key', array($this, 'regenerate_api_key'));
         add_action('rest_api_init', array($this, 'register_api_endpoint'));
-        add_action('init', array($this, 'load_textdomain'));
     }
     
     public function init() {
         // Plugin initialization
-    }
-    
-    public function load_textdomain() {
-        load_plugin_textdomain('perfect-content', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
     
     public function add_admin_menu() {
@@ -63,8 +58,12 @@ class PerfectContentPlugin {
     }
     
     public function admin_init() {
-        register_setting('perfect_content_settings', 'perfect_content_api_key');
-        register_setting('perfect_content_settings', 'perfect_content_api_endpoint');
+        register_setting('perfect_content_settings', 'perfect_content_api_key', array(
+            'sanitize_callback' => 'sanitize_text_field'
+        ));
+        register_setting('perfect_content_settings', 'perfect_content_api_endpoint', array(
+            'sanitize_callback' => 'esc_url_raw'
+        ));
     }
     
     public function admin_page() {
@@ -81,54 +80,54 @@ class PerfectContentPlugin {
             <div class="card">
                 <div class="brand-header">
                     <div class="brand-logo">
-                        <img src="<?php echo PERFECT_CONTENT_PLUGIN_URL; ?>images/icon-teal.svg" alt="Perfect Content Logo" />
+                        <img src="<?php echo esc_url(PERFECT_CONTENT_PLUGIN_URL); ?>images/icon-teal.svg" alt="Perfect Content Logo" />
                     </div>
-                    <h1><?php _e('Perfect Content Settings', 'perfect-content'); ?></h1>
+                    <h1><?php esc_html_e('Perfect Content Settings', 'perfect-content'); ?></h1>
                 </div>
                 
-                <h2><?php _e('API Configuration', 'perfect-content'); ?></h2>
-                <p><?php _e('Use these settings in your Perfect Content dashboard to connect your WordPress site.', 'perfect-content'); ?></p>
+                <h2><?php esc_html_e('API Configuration', 'perfect-content'); ?></h2>
+                <p><?php esc_html_e('Use these settings in your Perfect Content dashboard to connect your WordPress site.', 'perfect-content'); ?></p>
                 
                 <?php if (!empty($api_key) && !empty($api_endpoint)): ?>
                 <div class="api-info">
-                    <strong><?php _e('Connection Status:', 'perfect-content'); ?></strong>
-                    <span class="status-indicator connected"><?php _e('Ready to receive content', 'perfect-content'); ?></span>
+                    <strong><?php esc_html_e('Connection Status:', 'perfect-content'); ?></strong>
+                    <span class="status-indicator connected"><?php esc_html_e('Ready to receive content', 'perfect-content'); ?></span>
                 </div>
                 <?php else: ?>
                 <div class="api-info">
-                    <strong><?php _e('Connection Status:', 'perfect-content'); ?></strong>
-                    <span class="status-indicator disconnected"><?php _e('Configuration incomplete', 'perfect-content'); ?></span>
+                    <strong><?php esc_html_e('Connection Status:', 'perfect-content'); ?></strong>
+                    <span class="status-indicator disconnected"><?php esc_html_e('Configuration incomplete', 'perfect-content'); ?></span>
                 </div>
                 <?php endif; ?>
                 
                 <table class="form-table">
                     <tr>
-                        <th scope="row"><?php _e('API Endpoint', 'perfect-content'); ?></th>
+                        <th scope="row"><?php esc_html_e('API Endpoint', 'perfect-content'); ?></th>
                         <td>
                             <input type="text" value="<?php echo esc_attr($api_endpoint); ?>" readonly class="regular-text" />
-                            <p class="description"><?php _e('Copy this URL to your Perfect Content dashboard.', 'perfect-content'); ?></p>
+                            <p class="description"><?php esc_html_e('Copy this URL to your Perfect Content dashboard.', 'perfect-content'); ?></p>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><?php _e('API Key', 'perfect-content'); ?></th>
+                        <th scope="row"><?php esc_html_e('API Key', 'perfect-content'); ?></th>
                         <td>
                             <input type="text" value="<?php echo esc_attr($api_key); ?>" readonly class="regular-text" />
-                            <button type="button" id="regenerate-key" class="button"><?php _e('Regenerate Key', 'perfect-content'); ?></button>
-                            <p class="description"><?php _e('Copy this key to your Perfect Content dashboard.', 'perfect-content'); ?></p>
+                            <button type="button" id="regenerate-key" class="button"><?php esc_html_e('Regenerate Key', 'perfect-content'); ?></button>
+                            <p class="description"><?php esc_html_e('Copy this key to your Perfect Content dashboard.', 'perfect-content'); ?></p>
                         </td>
                     </tr>
                 </table>
             </div>
             
             <div class="card">
-                <h2><?php _e('About Perfect Content', 'perfect-content'); ?></h2>
-                <p><?php _e('Perfect Content is a web application that generates high-quality content using AI and allows professionals to review and edit the content before publishing.', 'perfect-content'); ?></p>
+                <h2><?php esc_html_e('About Perfect Content', 'perfect-content'); ?></h2>
+                <p><?php esc_html_e('Perfect Content is a web application that generates high-quality content using AI and allows professionals to review and edit the content before publishing.', 'perfect-content'); ?></p>
                 <p>
-                    <a href="https://perfectcontent.nl" target="_blank" class="button button-primary"><?php _e('Visit Perfect Content', 'perfect-content'); ?></a>
-                    <a href="https://perfectcontent.nl/dashboard" target="_blank" class="button"><?php _e('Go to Dashboard', 'perfect-content'); ?></a>
+                    <a href="https://perfectcontent.nl" target="_blank" class="button button-primary"><?php esc_html_e('Visit Perfect Content', 'perfect-content'); ?></a>
+                    <a href="https://perfectcontent.nl/dashboard" target="_blank" class="button"><?php esc_html_e('Go to Dashboard', 'perfect-content'); ?></a>
                 </p>
                 <p class="description">
-                    <?php _e('In your Perfect Content dashboard, go to "Edit" your company and fill in the API endpoint and API key from above.', 'perfect-content'); ?>
+                    <?php esc_html_e('In your Perfect Content dashboard, go to "Edit" your company and fill in the API endpoint and API key from above.', 'perfect-content'); ?>
                 </p>
             </div>
         </div>
@@ -136,16 +135,16 @@ class PerfectContentPlugin {
         <script>
         jQuery(document).ready(function($) {
             $('#regenerate-key').click(function() {
-                if (confirm('<?php _e('Are you sure you want to regenerate the API key? This will break the connection with Perfect Content until you update the key in your dashboard.', 'perfect-content'); ?>')) {
+                if (confirm('<?php echo esc_js(__('Are you sure you want to regenerate the API key? This will break the connection with Perfect Content until you update the key in your dashboard.', 'perfect-content')); ?>')) {
                     $.post(ajaxurl, {
                         action: 'perfect_content_regenerate_key',
-                        nonce: '<?php echo wp_create_nonce('perfect_content_regenerate_key'); ?>'
+                        nonce: '<?php echo esc_js(wp_create_nonce('perfect_content_regenerate_key')); ?>'
                     }, function(response) {
                         if (response.success) {
                             $('input[value="<?php echo esc_js($api_key); ?>"]').val(response.data.new_key);
-                            alert('<?php _e('API key regenerated successfully!', 'perfect-content'); ?>');
+                            alert('<?php echo esc_js(__('API key regenerated successfully!', 'perfect-content')); ?>');
                         } else {
-                            alert('<?php _e('Error regenerating API key.', 'perfect-content'); ?>');
+                            alert('<?php echo esc_js(__('Error regenerating API key.', 'perfect-content')); ?>');
                         }
                     });
                 }
@@ -159,7 +158,7 @@ class PerfectContentPlugin {
         check_ajax_referer('perfect_content_regenerate_key', 'nonce');
         
         if (!current_user_can('manage_options')) {
-            wp_die(__('You do not have permission to perform this action.', 'perfect-content'));
+            wp_die(esc_html__('You do not have permission to perform this action.', 'perfect-content'));
         }
         
         $new_key = wp_generate_password(32, false);
@@ -209,7 +208,7 @@ class PerfectContentPlugin {
             'post_content' => $body,
             'post_status' => 'publish',
             'post_type' => 'post',
-            'post_author' => 1, // Default to admin user
+            'post_author' => get_current_user_id() ?: 1, // Use current user or admin as fallback
         );
         
         // Handle scheduled publishing
@@ -217,7 +216,7 @@ class PerfectContentPlugin {
             $publish_time = strtotime($published_at);
             if ($publish_time > time()) {
                 $post_data['post_status'] = 'future';
-                $post_data['post_date'] = date('Y-m-d H:i:s', $publish_time);
+                $post_data['post_date'] = gmdate('Y-m-d H:i:s', $publish_time);
             }
         }
         
@@ -241,10 +240,23 @@ class PerfectContentPlugin {
     }
     
     private function download_and_save_image($image_url, $title) {
-        // Download the image
-        $response = wp_remote_get($image_url);
+        // Validate URL
+        if (!filter_var($image_url, FILTER_VALIDATE_URL)) {
+            return null;
+        }
+        
+        // Download the image with timeout
+        $response = wp_remote_get($image_url, array(
+            'timeout' => 30,
+            'user-agent' => 'Perfect Content WordPress Plugin'
+        ));
         
         if (is_wp_error($response)) {
+            return null;
+        }
+        
+        $response_code = wp_remote_retrieve_response_code($response);
+        if ($response_code !== 200) {
             return null;
         }
         
@@ -254,7 +266,7 @@ class PerfectContentPlugin {
         }
         
         // Get file extension
-        $file_extension = pathinfo(parse_url($image_url, PHP_URL_PATH), PATHINFO_EXTENSION);
+        $file_extension = pathinfo(wp_parse_url($image_url, PHP_URL_PATH), PATHINFO_EXTENSION);
         if (empty($file_extension)) {
             $file_extension = 'jpg'; // Default to jpg
         }
