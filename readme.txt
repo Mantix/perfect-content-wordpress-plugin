@@ -1,10 +1,10 @@
-=== Perfect Content ===
+=== Perfect Content Connector ===
 Contributors: mantix
 Tags: content, ai, automation, publishing, api
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Integrate with Perfect Content to automatically publish AI-generated content to 
 
 == Description ==
 
-Perfect Content is a WordPress plugin developed by Mantix BV that seamlessly integrates with the Perfect Content web application to automatically publish AI-generated content to your WordPress site.
+Perfect Content Connector is a WordPress plugin developed by Mantix BV that seamlessly integrates with the Perfect Content web application to automatically publish AI-generated content to your WordPress site.
 
 = Key Features =
 
@@ -26,7 +26,7 @@ Perfect Content is a WordPress plugin developed by Mantix BV that seamlessly int
 = How It Works =
 
 1. Install and activate the plugin
-2. Go to Settings > Perfect Content in your WordPress admin
+2. Go to Settings > Perfect Content Connector in your WordPress admin
 3. Copy the API endpoint and API key
 4. Configure these settings in your Perfect Content dashboard
 5. Perfect Content will automatically publish content to your WordPress site
@@ -55,9 +55,9 @@ Visit [Perfect Content](https://perfectcontent.nl) to learn more about the servi
 
 == Installation ==
 
-1. Upload the plugin files to `/wp-content/plugins/perfect-content/` directory
+1. Upload the plugin files to `/wp-content/plugins/perfect-content-connector/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to Settings > Perfect Content to configure your API settings
+3. Go to Settings > Perfect Content Connector to configure your API settings
 4. Copy the API endpoint and key to your Perfect Content dashboard
 
 == Frequently Asked Questions ==
@@ -86,6 +86,13 @@ The plugin supports English and Dutch languages.
 
 == Changelog ==
 
+= 1.0.1 =
+* Updated plugin name to "Perfect Content Connector" for better clarity
+* Changed plugin slug to "perfect-content-connector"
+* Updated API endpoint namespace to "perfect-content-connector/v1"
+* Renamed main plugin file to match new slug
+* Fixed WordPress coding standards compliance (class naming)
+
 = 1.0.0 =
 * Initial release by Mantix BV
 * API integration with Perfect Content
@@ -96,8 +103,11 @@ The plugin supports English and Dutch languages.
 
 == Upgrade Notice ==
 
+= 1.0.1 =
+Important: The API endpoint URL has changed. If you have the plugin configured in your Perfect Content dashboard, please update the API endpoint URL to the new format: `/wp-json/perfect-content-connector/v1/publish`
+
 = 1.0.0 =
-Initial release of Perfect Content WordPress plugin.
+Initial release of Perfect Content Connector WordPress plugin.
 
 == Support ==
 

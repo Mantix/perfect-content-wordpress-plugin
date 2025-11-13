@@ -1,4 +1,4 @@
-# Perfect Content WordPress Plugin
+# Perfect Content Connector WordPress Plugin
 
 A WordPress plugin developed by Mantix BV that integrates with Perfect Content to automatically publish AI-generated content to your WordPress site.
 
@@ -13,13 +13,13 @@ A WordPress plugin developed by Mantix BV that integrates with Perfect Content t
 
 ## Installation
 
-1. Upload the plugin files to `/wp-content/plugins/perfect-content/` directory
+1. Upload the plugin files to `/wp-content/plugins/perfect-content-connector/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to Settings > Perfect Content to configure your API settings
+3. Go to Settings > Perfect Content Connector to configure your API settings
 
 ## Configuration
 
-1. After activation, go to **Settings > Perfect Content** in your WordPress admin
+1. After activation, go to **Settings > Perfect Content Connector** in your WordPress admin
 2. Copy the **API Endpoint** URL and **API Key** 
 3. In your Perfect Content dashboard, go to "Edit" your company
 4. Fill in the API endpoint and API key from the WordPress plugin
@@ -27,7 +27,7 @@ A WordPress plugin developed by Mantix BV that integrates with Perfect Content t
 
 ## API Usage
 
-The plugin creates a REST API endpoint at `/wp-json/perfect-content/v1/publish` that accepts POST requests with the following data:
+The plugin creates a REST API endpoint at `/wp-json/perfect-content-connector/v1/publish` that accepts POST requests with the following data:
 
 ```json
 {

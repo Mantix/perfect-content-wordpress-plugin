@@ -1,13 +1,13 @@
-# Perfect Content Plugin - Dutch
-# Copyright (C) 2024 Perfect Content
+# Perfect Content Connector - Dutch
+# Copyright (C) 2024 Mantix BV
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Perfect Content 1.0.0\n"
+"Project-Id-Version: Perfect Content Connector 1.0.2\n"
 "Report-Msgid-Bugs-To: https://perfectcontent.nl\n"
 "POT-Creation-Date: 2024-01-01 12:00+0000\n"
 "PO-Revision-Date: 2024-01-01 12:00+0000\n"
-"Last-Translator: Perfect Content\n"
+"Last-Translator: Mantix BV\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,8 @@ msgstr ""
 msgid "Perfect Content Settings"
 msgstr "Perfect Content Instellingen"
 
-msgid "Perfect Content"
-msgstr "Perfect Content"
+msgid "Perfect Content Connector"
+msgstr "Perfect Content Connector"
 
 msgid "API Configuration"
 msgstr "API Configuratie"
@@ -89,3 +89,4 @@ msgstr "Klaar om content te ontvangen"
 
 msgid "Configuration incomplete"
 msgstr "Configuratie onvolledig"
+

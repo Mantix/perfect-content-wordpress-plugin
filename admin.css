@@ -1,16 +1,16 @@
 /* Perfect Content Plugin Admin Styles */
 
 :root {
-    --perfect-content-primary: #00a4a4;
-    --perfect-content-primary-dark: #008a8a;
-    --perfect-content-primary-light: #e6f7f7;
+    --perfect-content-connector-primary: #00a4a4;
+    --perfect-content-connector-primary-dark: #008a8a;
+    --perfect-content-connector-primary-light: #e6f7f7;
 }
 
-.perfect-content-admin {
+.perfect-content-connector-admin {
     max-width: 800px;
 }
 
-.perfect-content-admin .card {
+.perfect-content-connector-admin .card {
     background: #fff;
     border: 1px solid #ccd0d4;
     border-radius: 4px;
@@ -19,7 +19,7 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
 }
 
-.perfect-content-admin .card h2 {
+.perfect-content-connector-admin .card h2 {
     margin-top: 0;
     color: #23282d;
     font-size: 18px;
@@ -28,7 +28,7 @@
     gap: 10px;
 }
 
-.perfect-content-admin .card h2::before {
+.perfect-content-connector-admin .card h2::before {
     content: '';
     display: inline-block;
     width: 24px;
@@ -39,36 +39,36 @@
     background-position: center;
 }
 
-.perfect-content-admin .form-table th {
+.perfect-content-connector-admin .form-table th {
     width: 200px;
     padding: 20px 10px 20px 0;
     vertical-align: top;
 }
 
-.perfect-content-admin .form-table td {
+.perfect-content-connector-admin .form-table td {
     padding: 15px 10px;
 }
 
-.perfect-content-admin input[readonly] {
+.perfect-content-connector-admin input[readonly] {
     background-color: #f1f1f1;
     color: #666;
 }
 
-.perfect-content-admin .button {
-    border-color: var(--perfect-content-primary);
-    color: var(--perfect-content-primary);
+.perfect-content-connector-admin .button {
+    border-color: var(--perfect-content-connector-primary);
+    color: var(--perfect-content-connector-primary);
     transition: all 0.2s ease;
 }
 
-.perfect-content-admin .button:hover {
-    background: var(--perfect-content-primary);
+.perfect-content-connector-admin .button:hover {
+    background: var(--perfect-content-connector-primary);
     color: #fff;
-    border-color: var(--perfect-content-primary);
+    border-color: var(--perfect-content-connector-primary);
 }
 
-.perfect-content-admin .button.button-primary {
-    background: var(--perfect-content-primary);
-    border-color: var(--perfect-content-primary);
+.perfect-content-connector-admin .button.button-primary {
+    background: var(--perfect-content-connector-primary);
+    border-color: var(--perfect-content-connector-primary);
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -76,34 +76,34 @@
     transition: all 0.2s ease;
 }
 
-.perfect-content-admin .button.button-primary:hover {
-    background: var(--perfect-content-primary-dark);
-    border-color: var(--perfect-content-primary-dark);
+.perfect-content-connector-admin .button.button-primary:hover {
+    background: var(--perfect-content-connector-primary-dark);
+    border-color: var(--perfect-content-connector-primary-dark);
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 164, 164, 0.3);
 }
 
-.perfect-content-admin .description {
+.perfect-content-connector-admin .description {
     font-style: italic;
     color: #666;
     margin-top: 5px;
 }
 
-.perfect-content-admin .api-info {
-    background: var(--perfect-content-primary-light);
-    border-left: 4px solid var(--perfect-content-primary);
+.perfect-content-connector-admin .api-info {
+    background: var(--perfect-content-connector-primary-light);
+    border-left: 4px solid var(--perfect-content-connector-primary);
     padding: 15px;
     margin: 15px 0;
     border-radius: 0 4px 4px 0;
 }
 
-.perfect-content-admin .api-info strong {
-    color: var(--perfect-content-primary);
+.perfect-content-connector-admin .api-info strong {
+    color: var(--perfect-content-connector-primary);
 }
 
 /* Brand header styling */
-.perfect-content-admin .brand-header {
-    background: linear-gradient(135deg, var(--perfect-content-primary) 0%, var(--perfect-content-primary-dark) 100%);
+.perfect-content-connector-admin .brand-header {
+    background: linear-gradient(135deg, var(--perfect-content-connector-primary) 0%, var(--perfect-content-connector-primary-dark) 100%);
     color: white;
     padding: 20px;
     margin: -20px -20px 20px -20px;
@@ -113,14 +113,14 @@
     gap: 15px;
 }
 
-.perfect-content-admin .brand-header h1 {
+.perfect-content-connector-admin .brand-header h1 {
     margin: 0;
     color: white;
     font-size: 24px;
     font-weight: 600;
 }
 
-.perfect-content-admin .brand-logo {
+.perfect-content-connector-admin .brand-logo {
     width: 40px;
     height: 40px;
     background: white;
@@ -131,33 +131,33 @@
     justify-content: center;
 }
 
-.perfect-content-admin .brand-logo img {
+.perfect-content-connector-admin .brand-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.perfect-content-admin .brand-logo svg {
+.perfect-content-connector-admin .brand-logo svg {
     width: 100%;
     height: 100%;
 }
 
 /* Enhanced form styling */
-.perfect-content-admin .form-table input[type="text"] {
+.perfect-content-connector-admin .form-table input[type="text"] {
     border: 2px solid #e1e1e1;
     border-radius: 4px;
     padding: 8px 12px;
     transition: border-color 0.2s ease;
 }
 
-.perfect-content-admin .form-table input[type="text"]:focus {
-    border-color: var(--perfect-content-primary);
-    box-shadow: 0 0 0 1px var(--perfect-content-primary);
+.perfect-content-connector-admin .form-table input[type="text"]:focus {
+    border-color: var(--perfect-content-connector-primary);
+    box-shadow: 0 0 0 1px var(--perfect-content-connector-primary);
     outline: none;
 }
 
 /* Status indicators */
-.perfect-content-admin .status-indicator {
+.perfect-content-connector-admin .status-indicator {
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -167,12 +167,12 @@
     font-weight: 500;
 }
 
-.perfect-content-admin .status-indicator.connected {
+.perfect-content-connector-admin .status-indicator.connected {
     background: #d4edda;
     color: #155724;
 }
 
-.perfect-content-admin .status-indicator.disconnected {
+.perfect-content-connector-admin .status-indicator.disconnected {
     background: #f8d7da;
     color: #721c24;
 }
