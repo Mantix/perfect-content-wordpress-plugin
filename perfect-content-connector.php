@@ -47,14 +47,48 @@ class Perfect_Content_Connector_Plugin {
             'dashicons-admin-generic'
         );
         
-        // Enqueue admin styles
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_styles'));
+        // Enqueue admin styles and scripts
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_assets'));
     }
     
-    public function enqueue_admin_styles($hook) {
-        if ($hook === 'settings_page_perfect-content-connector') {
-            wp_enqueue_style('perfect-content-connector-admin', PERFECT_CONTENT_CONNECTOR_PLUGIN_URL . 'admin.css', array(), PERFECT_CONTENT_CONNECTOR_VERSION);
+    public function enqueue_admin_assets($hook) {
+        // Only load on our settings page
+        if ($hook !== 'settings_page_perfect-content-connector') {
+            return;
         }
+        
+        // Register and enqueue CSS
+        wp_register_style(
+            'perfect-content-connector-admin',
+            PERFECT_CONTENT_CONNECTOR_PLUGIN_URL . 'admin.css',
+            array(),
+            PERFECT_CONTENT_CONNECTOR_VERSION
+        );
+        wp_enqueue_style('perfect-content-connector-admin');
+        
+        // Register and enqueue JavaScript with jQuery dependency
+        wp_register_script(
+            'perfect-content-connector-admin',
+            PERFECT_CONTENT_CONNECTOR_PLUGIN_URL . 'admin.js',
+            array('jquery'),
+            PERFECT_CONTENT_CONNECTOR_VERSION,
+            true
+        );
+        
+        // Localize script to pass PHP variables to JavaScript
+        wp_localize_script(
+            'perfect-content-connector-admin',
+            'perfectContentConnector',
+            array(
+                'ajaxurl' => admin_url('admin-ajax.php'),
+                'nonce' => wp_create_nonce('perfect_content_connector_regenerate_key'),
+                'currentApiKey' => get_option('perfect_content_connector_api_key', ''),
+                'confirmMessage' => esc_js(__('Are you sure you want to regenerate the API key? This will break the connection with Perfect Content until you update the key in your dashboard.', 'perfect-content-connector')),
+                'successMessage' => esc_js(__('API key regenerated successfully!', 'perfect-content-connector')),
+                'errorMessage' => esc_js(__('Error regenerating API key.', 'perfect-content-connector'))
+            )
+        );
+        wp_enqueue_script('perfect-content-connector-admin');
     }
     
     public function admin_init() {
@@ -131,26 +165,6 @@ class Perfect_Content_Connector_Plugin {
                 </p>
             </div>
         </div>
-        
-        <script>
-        jQuery(document).ready(function($) {
-            $('#regenerate-key').click(function() {
-                if (confirm('<?php echo esc_js(__('Are you sure you want to regenerate the API key? This will break the connection with Perfect Content until you update the key in your dashboard.', 'perfect-content-connector')); ?>')) {
-                    $.post(ajaxurl, {
-                        action: 'perfect_content_connector_regenerate_key',
-                        nonce: '<?php echo esc_js(wp_create_nonce('perfect_content_connector_regenerate_key')); ?>'
-                    }, function(response) {
-                        if (response.success) {
-                            $('input[value="<?php echo esc_js($api_key); ?>"]').val(response.data.new_key);
-                            alert('<?php echo esc_js(__('API key regenerated successfully!', 'perfect-content-connector')); ?>');
-                        } else {
-                            alert('<?php echo esc_js(__('Error regenerating API key.', 'perfect-content-connector')); ?>');
-                        }
-                    });
-                }
-            });
-        });
-        </script>
         <?php
     }
     
